@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# docker build -t ovmf-builder .
-# docker run -it -v "$(pwd)/Build:/root/edk2/Build" ovmf-builder
+docker build -t ovmf-builder .
+docker run -it -v "$(pwd)/Build:/root/edk2/Build" ovmf-builder
 
 if [ ! -d "../OVMF" ]; then
     mkdir ../OVMF
